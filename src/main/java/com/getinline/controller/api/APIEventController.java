@@ -1,14 +1,17 @@
 package com.getinline.controller.api;
 
-import com.sun.tools.javac.util.List;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 @RequestMapping("/api")
 @RestController
 public class APIEventController {
     @GetMapping("/events")
     public List<String> getEvents(){
-        return List.of("event1","event2");
+        return Arrays.asList(new String[]{"event1", "event2"});
     }
     @PostMapping("/events")
     public Boolean createEvent(){
