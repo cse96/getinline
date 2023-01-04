@@ -1,14 +1,17 @@
 package com.getinline.controller.api;
 
-import com.sun.tools.javac.util.List;
+
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.List;
 
 @RequestMapping("/api")
 @RestController
 public class APIPlaceController {
     @GetMapping("/places")
     public List<String> getPlaces(){
-        return List.of("place1","place2");
+        return Arrays.asList("place1", "place2");
     }
 
     @PostMapping("/places")
